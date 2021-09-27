@@ -1,0 +1,19 @@
+image: ubuntu:20.04
+
+stages:
+  - build-no-cache
+
+build:
+  stage: build
+  script:
+    - make build
+
+build-no-cache:
+  stage: build-no-cache
+  script:
+    - make build-no-cache
+
+push:
+  stage: push
+  script:
+    - make push
